@@ -10,17 +10,18 @@
 body {
 	margin: 0 auto;
 	max-width: 1200px;
-	font-family: 'Lato';
-	color: #333;
+	font-family: 'arial', 'sans-serif';
+	color: #925151;
 }
 
 .icon-cart {
 	width: 40px;
 	height: 40px;
-	stroke: #000;
+	stroke: #a70808;
 }
 
 .icon-cart:hover {
+	box-shadow: 2px 2px 5px #888;
 	cursor: pointer;
 }
 
@@ -56,28 +57,29 @@ header {
 }
 
 #contador-productos {
-	font-size: 12px;
+	font-size: 18px;
+	color: #fff;
 }
 
 .container-cart-products {
 	position: absolute;
-	top: 50px;
-	right: 0;
+	top: 75px;
+	right: 0px;
 
-	background-color: #fff;
+	background-color: #ffffff;
 	width: 400px;
 	z-index: 1;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.918);
+	border-radius: 50px;
 }
 
 .cart-product {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 30px;
+	padding: 25px;
 
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 10px solid rgba(102, 102, 102, 0.2);
 }
 
 .info-cart-product {
@@ -87,23 +89,26 @@ header {
 }
 
 .titulo-producto-carrito {
-	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	font-size: 25px;
 }
 
 .precio-producto-carrito {
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 35px;
 	margin-left: 10px;
 }
 
 .cantidad-producto-carrito {
-	font-weight: 400;
-	font-size: 20px;
+	align-items: center;
+	font-weight: 200;
+	font-size: 40px;
 }
 
 .icon-close {
-	width: 25px;
-	height: 25px;
+	width: 35px;
+	height: 35px;
 }
 
 .icon-close:hover {
@@ -116,12 +121,12 @@ header {
 	justify-content: center;
 	align-items: center;
 	padding: 20px 0;
-	gap: 20px;
+	gap: 30px;
 }
 
 .cart-total h3 {
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 1000;
 }
 
 .total-pagar {
@@ -140,12 +145,11 @@ header {
 	gap: 20px;
 }
 
-.item {
+.item{
+	background-color: #fff;
 	border-radius: 10px;
-}
-
-.item:hover {
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.918);
+	overflow: hidden;
 }
 
 .item img {
@@ -173,13 +177,13 @@ header {
 }
 
 .price {
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: 900;
 }
 
 .info-product button {
-	border: none;
-	background: none;
+	border: round;
+	border-radius: 25px;
 	background-color: #000;
 	color: #fff;
 	padding: 15px 10px;
@@ -203,16 +207,16 @@ header {
 	display: block;
 	width: 100%;
 	margin-top: 10px;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
 	font-family: inherit;
 	cursor: pointer;
-  font-size: 16px;
-  transition: all .3s ease;
+  	font-size: 26px;
+  	transition: all .3s ease;
 }
 
 .btn-clear-all:hover{
-  background-color: #333;
+  background-color: #681818;
   transform: scale(1.03);
-  border-radius: 0;
+  border-radius: 25px;
 }

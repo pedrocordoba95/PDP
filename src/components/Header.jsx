@@ -1,5 +1,8 @@
 import { useState } from 'react';
 
+/* Este es un componente funcional llamado `Header` que recibe varios accesorios (`allProducts`,
+`setAllProducts`, `total`, `countProducts`, `setCountProducts` y `setTotal`) y devuelve el código
+JSX que representa el encabezado de una compra. carro. */
 export const Header = ({
 	allProducts,
 	setAllProducts,
@@ -10,6 +13,10 @@ export const Header = ({
 }) => {
 	const [active, setActive] = useState(false);
 
+/**
+ * Esta función elimina un producto de una lista de productos y actualiza el precio total y el recuento
+ * de productos en consecuencia.
+ */
 	const onDeleteProduct = product => {
 		const results = allProducts.filter(
 			item => item.id !== product.id
@@ -20,12 +27,21 @@ export const Header = ({
 		setAllProducts(results);
 	};
 
+/**
+ * La función "onCleanCart" establece todos los productos, el total y los productos de recuento a cero.
+ */
 	const onCleanCart = () => {
 		setAllProducts([]);
 		setTotal(0);
 		setCountProducts(0);
 	};
 
+/* Este es el código JSX que representa el encabezado de un carrito de compras. Incluye un ícono de
+carrito que muestra la cantidad de productos en el carrito y un menú desplegable que muestra la
+lista de productos en el carrito, su cantidad, precio y un botón para eliminarlos. También muestra
+el precio total de todos los productos del carrito y un botón para vaciar el carrito. El componente
+recibe varios accesorios como `allProducts`, `setAllProducts`, `total`, `countProducts`,
+`setCountProducts` y `setTotal` para administrar el estado del carrito. */
 	return (
 		<header>
 			<h1>Tienda</h1>
@@ -40,12 +56,12 @@ export const Header = ({
 						fill='none'
 						viewBox='0 0 24 24'
 						strokeWidth='1.5'
-						stroke='currentColor'
+						stroke='red'
 						className='icon-cart'
 					>
 						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
+							strokeLinecap='square'
+							strokeLinejoin='square'
 							d='M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z'
 						/>
 					</svg>
@@ -79,14 +95,14 @@ export const Header = ({
 											xmlns='http://www.w3.org/2000/svg'
 											fill='none'
 											viewBox='0 0 24 24'
-											strokeWidth='1.5'
-											stroke='currentColor'
+											strokeWidth='5.5'
+											stroke='red'
 											className='icon-close'
 											onClick={() => onDeleteProduct(product)}
 										>
 											<path
-												strokeLinecap='round'
-												strokeLinejoin='round'
+												strokeLinecap='square'
+												strokeLinejoin='square'
 												d='M6 18L18 6M6 6l12 12'
 											/>
 										</svg>
